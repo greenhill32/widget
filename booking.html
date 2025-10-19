@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo Hotel Booking</title>
+    <style>
+        body { font-family: Arial; padding: 40px; max-width: 600px; margin: 0 auto; }
+        .form-group { margin: 20px 0; }
+        input, button { padding: 10px; font-size: 16px; }
+        button { background: #0066cc; color: white; border: none; cursor: pointer; }
+        .results { margin-top: 40px; }
+        .hotel { padding: 15px; border: 1px solid #ddd; margin: 10px 0; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>🏨 Hotel Search</h1>
+    
+    <div class="form-group">
+        <label>Origin:</label>
+        <input type="text" id="origin" value="London" />
+    </div>
+    
+    <div class="form-group">
+        <label>Destination:</label>
+        <input type="text" id="destination" value="Paris" />
+    </div>
+    
+    <div class="form-group">
+        <label>Check-in Date:</label>
+        <input type="date" id="checkin" value="2025-10-20" />
+    </div>
+    
+    <div class="form-group">
+        <label>Check-out Date:</label>
+        <input type="date" id="checkout" value="2025-10-25" />
+    </div>
+    
+    <button onclick="search()">Search Hotels</button>
+    
+    <div class="results" id="results" style="display:none;">
+        <h2>Available Hotels in Paris</h2>
+        <div class="hotel">
+            <h3>Hotel Lumière ⭐⭐⭐⭐⭐</h3>
+            <p>£245/night • Near Eiffel Tower • Free WiFi</p>
+        </div>
+        <div class="hotel">
+            <h3>Le Marais Inn ⭐⭐⭐⭐</h3>
+            <p>£180/night • City Center • Breakfast Included</p>
+        </div>
+        <div class="hotel">
+            <h3>Budget Stay Paris ⭐⭐⭐</h3>
+            <p>£95/night • Metro Access • Basic Amenities</p>
+        </div>
+    </div>
+    
+    <script>
+        function search() {
+            // Simulate loading time (what a scraper would experience)
+            document.getElementById('results').style.display = 'none';
+            setTimeout(() => {
+                document.getElementById('results').style.display = 'block';
+            }, 500);
+        }
+    </script>
+</body>
+</html>
